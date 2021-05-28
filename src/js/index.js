@@ -22,6 +22,7 @@ window.onload = function () {
     const svg = Array.from(document.querySelectorAll('path'));
         svg.map(it => it.addEventListener('click', () => {
             it.setAttribute('fill', 'red')
+            alert('Добавлено в избранное')
         }))
 
     $(window).scroll(function () {
