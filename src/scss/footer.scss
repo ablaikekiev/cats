@@ -1,0 +1,117 @@
+.footer{
+  padding: 83px 0 92px;
+  background: #1F2021;
+  &-flexBox{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    &__title{
+      font-style: normal;
+      font-weight: bold;
+      font-size: 48px;
+      line-height: 59px;
+      /* identical to box height */
+
+
+      color: #FFFFFF;
+    }
+    &__subtitle{
+      font-style: normal;
+      font-weight: normal;
+      font-size: 28px;
+      line-height: 91.2%;
+      /* or 26px */
+      width: 320px;
+      margin-top: 26px;
+      color: #FFFFFF;
+    }
+    &__form{
+      margin: 4px;
+      display: flex;
+      flex-wrap: wrap;
+      max-width: 566px;
+      justify-content: flex-start;
+    }
+    &__input{
+      margin: 4px;
+      width: 300px;
+      height: 65px;
+      border-radius: 10px;
+      outline: none;
+      border: none;
+      padding: 25px 33px;
+    }
+    &__btn{
+      margin: 4px;
+      width: 250px;
+      height: 65px;
+      background: #6EBBD3;
+      border-radius: 10px;
+      outline: none;
+      border: none;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 14px;
+      line-height: 17px;
+      /* identical to box height */
+      cursor: pointer;
+
+      color: #FFFFFF;
+
+    }
+    &__label{
+      font-style: normal;
+      font-weight: normal;
+      font-size: 14px;
+      line-height: 18px;
+      /* identical to box height */
+      display: flex;
+      width: 220px;
+      align-items: center;
+      justify-content: space-between;
+      color: #FFFFFF;
+      cursor: pointer;
+    }
+    &__checkbox{
+      position: absolute;
+      z-index: -1;
+      opacity: 0;
+      &+label {
+        display: flex;
+        align-items: center;
+        &::before {
+          content: '';
+          display: inline-block;
+          width: 18px;
+          height: 18px;
+          border: 1px solid #adb5bd;
+          border-radius: 5px;
+          background: no-repeat center;
+          background-size: 50%;
+          margin: 4px;
+        }
+      }
+      &:not(:disabled):not(:checked)+label:hover::before {
+        border-color: #b3d7ff;
+      }
+      &:not(:disabled):active+label::before {
+        background-color: #b3d7ff;
+        border-color: #b3d7ff;
+      }
+      &:focus+label::before {
+        box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+      }
+      &:focus:not(:checked)+label::before {
+        border-color: #80bdff;
+      }
+      &:checked+label::before {
+        border-color: #0b76ef;
+        background-color: #0b76ef;
+        background-image: url("../images/footer/arrowDown.png");
+      }
+      &:disabled+label::before {
+        background-color: #e9ecef;
+      }
+    }
+  }
+}
